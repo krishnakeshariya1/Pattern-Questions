@@ -45,3 +45,5 @@ for(let i =5; i >=1; i--){
     }
      console.log(row)
 }
+
+//Question 6 - Right Angle triangle 
