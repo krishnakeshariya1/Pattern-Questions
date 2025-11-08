@@ -104,3 +104,82 @@ for(let i =1; i <=n;i++){
    }
    console.log(row)
 }
+ // Question 11 Hollow square 
+
+ for(let i =1; i<=n; i++){
+    let row="";
+    for(let k =1; k <=n; k++){
+        if(k===1 || i === 1 || k === n || i === n){
+            row +="*";
+        }
+        else{
+            row += " ";
+        }
+    }
+    console.log(row)
+ }
+
+ // Question 12 hollow right angle triangle
+ for(let i =1; i<=n; i++){
+    let row = "";
+    for(let k =1; k<=i; k++){
+        if(i === 1 || i === n || k ===1 || k === i){
+            row += "*";
+        }
+        else{
+            row += " ";
+        }
+    }
+    console.log(row)
+ }
+
+ // Question 13 number pyramid
+ for(let i =1; i<=n; i++){
+    let row ="";
+    for(let j =1; j<=n-i; j++){
+        row+="  "
+    }
+    for(let a =1; a<=i; a++){
+        row +=a +" ";
+    }
+    for(let b = i-1; b>=1;b--){
+        row+=b+" ";
+    }
+    console.log(row)
+ }
+
+ // Question 14 Hollow diamond pattern
+for (let i = 1; i <= n; i++) {
+  let row = "";
+  for (let s = 1; s <= n - i; s++) {
+    row += " ";
+  }
+  row += "*";
+  for (let j = 1; j <= 2 * i - 3; j++) {
+    row += " ";
+  }
+  if (i > 1) {
+    row += "*";
+  }
+
+  console.log(row);
+}
+
+// lower half
+for (let i = n - 1; i >= 1; i--) {
+  let row = "";
+  for (let s = 1; s <= n - i; s++) {
+    row += " ";
+  }
+  row += "*";
+  for (let j = 1; j <= 2 * i - 3; j++) {
+    row += " ";
+  }
+  if (i > 1) {
+    row += "*";
+  }
+
+  console.log(row);
+}
+
+ 
