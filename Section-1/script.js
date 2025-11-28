@@ -1,7 +1,7 @@
 // Question 1 - solid square
-for(let i =1; i<=5; i++){
+for (let i = 1; i <= 5; i++) {
     let row = "";
-    for(let j =1; j<=5; j++){
+    for (let j = 1; j <= 5; j++) {
         row += "*";
     }
     console.log(row);
@@ -9,188 +9,249 @@ for(let i =1; i<=5; i++){
 
 // Question 2 - Right Angled Trinagle
 
-for(let i =1; i<=5; i++){
+for (let i = 1; i <= 5; i++) {
     let row = "";
-    for(let j =1; j<=i; j++){
+    for (let j = 1; j <= i; j++) {
         row += "*";
     }
     console.log(row);
 }
 
 // Question 3 - reverse Right Angles Triangle
-for(let i =5; i >=1; i--){
-    let row ="";
-    for(let j =1; j<=i; j++){
-         row += "*";
+for (let i = 5; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "*";
     }
-     console.log(row)
+    console.log(row)
 }
 
 // Question 4 - Increasing Number Triangle
 
-for(let i =1; i<=5; i++){
+for (let i = 1; i <= 5; i++) {
     let row = "";
-    for(let j =1; j<=i; j++){
-        row += j +" ";
+    for (let j = 1; j <= i; j++) {
+        row += j + " ";
     }
     console.log(row);
 }
 
 //Question 5 - Decreasing Number Traingle
+function pattern1(n) {
+    if (!Number.isInteger(n) || n <= 0) throw new Error("Input must be a positive integer");
 
-for(let i =5; i >=1; i--){
-    let row ="";
-    for(let j =1; j<=i; j++){
-         row += j+" ";
+    for (let i = 5; i >= 1; i--) {
+        let row = "";
+
+        for (let j = 1; j <= i; j++) {
+            row += j + " ";
+        }
+        console.log(row.trim())
     }
-     console.log(row)
 }
+pattern1(5)
 
 //Question 6 - Right Angle triangle 
-let n =5
-for(let i =1; i<= n; i++){
-    let row ="";
-    for(let j =1; j<= n-i; j++ ){
-        row +=" ";
+let n = 5
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= n - i; j++) {
+        row += " ";
     }
-    for(let k =1; k<= i; k++){
-        row+= "*";
+    for (let k = 1; k <= i; k++) {
+        row += "*";
     }
-    console.log(row );
+    console.log(row);
 }
 
 //Question 7 - Inverted -Right- Angled triangle
-for(let i=1; i<=n; i++){
-    let row="";
-    for(let j=1; j<i; j++){
-        row+=" ";
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j < i; j++) {
+        row += " ";
     }
-    for(let k=1; k<= (n-i)+1; k++){
-        row+="*"
+    for (let k = 1; k <= (n - i) + 1; k++) {
+        row += "*"
     }
     console.log(row)
 }
 
 // Question 8 - Centered pyramid
-for(let i =1; i<=n; i++){
-    let row= "";
-    for(let j =1; j<=n-i; j++){
-        row+=" ";
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= n - i; j++) {
+        row += " ";
     }
-    for(let k =1; k<= 2*i-1; k++){
-        row+="*";
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        row += "*";
     }
     console.log(row)
 }
 // Question 9 - inverted pyramid
- for (let i = 1; i <=n; i++){
-    let row ="";
-    for(let j =1; j<i; j++){
-        row+=" ";
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j < i; j++) {
+        row += " ";
     }
-    for(let k =1 ; k<= 2*(n-i)+1; k++){
-        row+="*"
+    for (let k = 1; k <= 2 * (n - i) + 1; k++) {
+        row += "*"
     }
     console.log(row)
 }
 // Question 10 Hollow pyramid
-for(let i =1; i <=n;i++){
-    let row ="";
-    for(let j=1; j<=n-i; j++ ){
-        row+=" ";
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= n - i; j++) {
+        row += " ";
     }
-   for (let k = 1; k <= 2 * i - 1; k++) {
-    (k === 1 || k === 2 * i - 1 || i === n) ? row += '*' : row += ' ';
-   }
-   console.log(row)
-}
- // Question 11 Hollow square 
-
- for(let i =1; i<=n; i++){
-    let row="";
-    for(let k =1; k <=n; k++){
-        if(k===1 || i === 1 || k === n || i === n){
-            row +="*";
-        }
-        else{
-            row += " ";
-        }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        (k === 1 || k === 2 * i - 1 || i === n) ? row += '*' : row += ' ';
     }
     console.log(row)
- }
+}
+// Question 11 Hollow square 
 
- // Question 12 hollow right angle triangle
- for(let i =1; i<=n; i++){
+for (let i = 1; i <= n; i++) {
     let row = "";
-    for(let k =1; k<=i; k++){
-        if(i === 1 || i === n || k ===1 || k === i){
+    for (let k = 1; k <= n; k++) {
+        if (k === 1 || i === 1 || k === n || i === n) {
             row += "*";
         }
-        else{
+        else {
             row += " ";
         }
     }
     console.log(row)
- }
+}
 
- // Question 13 number pyramid
- for(let i =1; i<=n; i++){
-    let row ="";
-    for(let j =1; j<=n-i; j++){
-        row+="  "
-    }
-    for(let a =1; a<=i; a++){
-        row +=a +" ";
-    }
-    for(let b = i-1; b>=1;b--){
-        row+=b+" ";
+// Question 12 hollow right angle triangle
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let k = 1; k <= i; k++) {
+        if (i === 1 || i === n || k === 1 || k === i) {
+            row += "*";
+        }
+        else {
+            row += " ";
+        }
     }
     console.log(row)
- }
+}
 
- // Question 14 Hollow diamond pattern
+// Question 13 number pyramid
 for (let i = 1; i <= n; i++) {
-  let row = "";
-  for (let s = 1; s <= n - i; s++) {
-    row += " ";
-  }
-  row += "*";
-  for (let j = 1; j <= 2 * i - 3; j++) {
-    row += " ";
-  }
-  if (i > 1) {
-    row += "*";
-  }
+    let row = "";
+    for (let j = 1; j <= n - i; j++) {
+        row += "  "
+    }
+    for (let a = 1; a <= i; a++) {
+        row += a + " ";
+    }
+    for (let b = i - 1; b >= 1; b--) {
+        row += b + " ";
+    }
+    console.log(row)
+}
 
-  console.log(row);
+// Question 14 Hollow diamond pattern
+for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let s = 1; s <= n - i; s++) {
+        row += " ";
+    }
+    row += "*";
+    for (let j = 1; j <= 2 * i - 3; j++) {
+        row += " ";
+    }
+    if (i > 1) {
+        row += "*";
+    }
+
+    console.log(row);
 }
 
 // lower half
 for (let i = n - 1; i >= 1; i--) {
-  let row = "";
-  for (let s = 1; s <= n - i; s++) {
-    row += " ";
-  }
-  row += "*";
-  for (let j = 1; j <= 2 * i - 3; j++) {
-    row += " ";
-  }
-  if (i > 1) {
+    let row = "";
+    for (let s = 1; s <= n - i; s++) {
+        row += " ";
+    }
     row += "*";
-  }
+    for (let j = 1; j <= 2 * i - 3; j++) {
+        row += " ";
+    }
+    if (i > 1) {
+        row += "*";
+    }
 
-  console.log(row);
+    console.log(row);
 }
 
- function pattern3(n){
-    if(!Number.isInteger(n) || n <=0) throw new Error("Input must be a positive integer");
-    
-    for(let i =1; i<=n; i++){
-        let line ="";
-        for(let j=i; j>0; j--){
-            line +=j;
+function pattern3(n) {
+    if (!Number.isInteger(n) || n <= 0) throw new Error("Input must be a positive integer");
+
+    for (let i = 1; i <= n; i++) {
+        let line = "";
+        for (let j = i; j > 0; j--) {
+            line += j;
         }
         console.log(line);
     }
- }
- pattern3(5);
+}
+pattern3(5);
+
+function pattern4(n) {
+    if (!Number.isInteger(n) || n <= 0) throw new Error("Input must be a positive integer");
+
+    for (let i = 1; i <= n; i++) {
+        let line = "";
+
+        for (let j = 1; j <= n - i; j++) {
+            line += "  ";
+        }
+
+        for (let k = 1; k <= i; k++) {
+            line += k + " ";
+        }
+        console.log(line)
+    }
+}
+pattern4(5);
+
+function pattern5(n){
+    if(!Number.isInteger(n) || n<=0) throw new Error("Input must be a positive integer");
+
+    for(let i=1; i<=n; i++){
+        let line ="";
+
+        for(let j=1; j<i; j++){
+            line+= " ";
+        }
+
+        for(let k=1; k<=(n-i)+1; k++){
+            line += k+" ";
+        }
+        console.log(line);
+    }
+}
+pattern5(6);
+
+
+// inverted left angle triangle
+function pattern6(n){
+    if(!Number.isInteger(n) || n<=0) throw new Error("Input must be a positive integer");
+
+    for(let i=1; i<=n; i++){
+        let line ="";
+
+        for(let j=1; j<i; j++){
+            line+= "  ";
+        }
+
+        for(let k=1; k<=(n-i)+1; k++){
+            line += k+" ";
+        }
+        console.log(line);
+    }
+}
+pattern6(6);  
