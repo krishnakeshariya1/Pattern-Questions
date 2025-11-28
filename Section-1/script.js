@@ -182,4 +182,15 @@ for (let i = n - 1; i >= 1; i--) {
   console.log(row);
 }
 
- 
+ function pattern3(n){
+    if(!Number.isInteger(n) || n <=0) throw new Error("Input must be a positive integer");
+    
+    for(let i =1; i<=n; i++){
+        let line ="";
+        for(let j=i; j>0; j--){
+            line +=j;
+        }
+        console.log(line);
+    }
+ }
+ pattern3(5);
